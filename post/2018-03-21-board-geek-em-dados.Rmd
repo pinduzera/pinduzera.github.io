@@ -4,7 +4,7 @@ author: Eduardo Ochetski Hellas
 date: '2018-03-21'
 slug: board-geek-em-dados
 categories: [r, analise]
-tags: [r, boardgame, dados]
+tags: ["r", "boardgame", "dados"]
 ---
 
 
