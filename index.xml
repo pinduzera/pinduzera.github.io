@@ -36,6 +36,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     <item>
       <title>Board Geek em dados</title>
       <link>/post/board-geek-em-dados/</link>
+      <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/board-geek-em-dados/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Board Geek em dados</title>
+      <link>/post/board-geek-em-dados/</link>
       <pubDate>Wed, 21 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/board-geek-em-dados/</guid>
@@ -49,7 +58,9 @@ When you click the Knit button a document will be generated that includes both c
       <pubDate>Wed, 21 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Me chamo Eduardo, e estou aqui para compartilhar insights e análises de dados. Sou formado em estatística pela Universidade de Brasília (UnB) e utilizo o R como principal linguagem de programação para fazer as abordagens analíticas.</description>
+      <description>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Me chamo Eduardo, e estou aqui para compartilhar insights e análises de dados. Sou formado em estatística pela Universidade de Brasília (UnB) e utilizo o R como principal linguagem de programação para fazer as abordagens analíticas.
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Como hobby sou apaixonado por jogos de tabuleiro com coca-cola e transformar café em análise.
+ .</description>
     </item>
     
     <item>
@@ -61,15 +72,6 @@ When you click the Knit button a document will be generated that includes both c
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>/contact/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/contact/</guid>
-      <description> First Name  Last Name  E-Mail  City  State AL CA IL      Send   </description>
     </item>
     
     <item>
@@ -94,6 +96,16 @@ More complete instructions are available at installing hugo
 Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
 Follow the following steps:
  Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contact/</guid>
+      <description>Para entrar em contato pode utilizar qualquer uma das redes no menu do site ou enviar um e-mail para ehellas@gmail.com.
+.</description>
     </item>
     
   </channel>
