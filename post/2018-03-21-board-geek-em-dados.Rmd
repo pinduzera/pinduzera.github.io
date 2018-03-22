@@ -3,7 +3,7 @@ title: Board Geek em dados
 author: Eduardo Ochetski Hellas
 date: '2018-03-21'
 slug: board-geek-em-dados
-categories: [r analise]
+categories: [r, analise]
 tags: [r, boardgame, dados]
 ---
 

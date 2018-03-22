@@ -36,15 +36,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     <item>
       <title>Board Geek em dados</title>
       <link>/post/board-geek-em-dados/</link>
-      <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/board-geek-em-dados/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Board Geek em dados</title>
-      <link>/post/board-geek-em-dados/</link>
       <pubDate>Wed, 21 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/board-geek-em-dados/</guid>
@@ -55,7 +46,7 @@ When you click the Knit button a document will be generated that includes both c
     <item>
       <title>Hello R Markdown</title>
       <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>/post/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
