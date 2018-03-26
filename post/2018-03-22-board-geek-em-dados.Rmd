@@ -1,9 +1,0 @@
----
-title: Board Geek em dados
-author: ~
-date: '2018-03-22'
-slug: board-geek-em-dados
-categories: []
-tags: []
----
-
