@@ -7,19 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 21 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/boardgame/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Board Geek em dados</title>
-      <link>/post/board-geek-em-dados/</link>
-      <pubDate>Wed, 21 Mar 2018 00:00:00 +0000</pubDate>
+      <title>Jogos de tabuleiro em números</title>
+      <link>/post/jogos-de-tabuleiro-em-n%C3%BAmeros/</link>
+      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/board-geek-em-dados/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
+      <guid>/post/jogos-de-tabuleiro-em-n%C3%BAmeros/</guid>
+      <description>Como primeiro post vamos ver um dos meu assuntos favoritos: jogos de tabuleiro. Esse post já começa como uma aventura atrasada pois já tinha feito as extrações dos dados do site Board game Geek faz um tempo, mas acabou que com minha enrolação um cara acabou analisando antes de mim! Pelo menos me serviu de inspiração pra começar. Assim, deixo avisado de antemão que algumas análises podem ser semelhantes mas quero dar foco diferente (e em português!</description>
     </item>
     
   </channel>
