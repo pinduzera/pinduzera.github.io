@@ -64,7 +64,7 @@ dados <- data.frame(rank = info$Board.Game.Rank, ano = info$ano, title = info$ti
 
 
 Como primeiro post vamos ver um dos meu assuntos favoritos: jogos de tabuleiro. Esse post já começa como uma aventura atrasada pois já tinha feito as extrações dos dados do site [Board game Geek](https://boardgamegeek.com/) faz um tempo, mas acabou que com minha enrolação um cara acabou 
-[analisando antes de mim!](http://dvatvani.github.io/BGG-Analysis-Part-1.html) Pelo menos me serviu de inspiração pra começar. Assim, deixo avisado de antemão que algumas análises podem ser semelhantes mas quero dar foco diferente (e em português!).
+[analisando antes de mim!](http://dvatvani.github.io/BGG-Analysis-Part-1.html) Pelo menos me serviu de inspiração para começar. Assim, deixo avisado de antemão que algumas análises podem ser semelhantes mas quero dar foco diferente (e em português!).
 
 ## Jogos de tabuleiro modernos
 
@@ -88,7 +88,7 @@ ggplot(anos, aes(x = ano)) +
   geom_vline(aes(xintercept=2009, color = 'Criação do Kickstarter'), linetype="dashed")+
   scale_color_manual(name = "",
                      values = c("Criação do BGG" = "red", 'Lançamento do Catan' = 'blue',
-                                'Criação do Kickstarter' = 'green'))+
+                                'Criação do Kickstarter' = 'darkgreen'))+
   theme(legend.position=c(.20,.85), plot.title = element_text(hjust = 0.5, face = 'bold'),
         axis.title.x = element_text(face = 'bold'), axis.title.y = element_text(face = 'bold'),
         plot.caption = element_text(size = 6))+
@@ -107,11 +107,12 @@ quant1 <- filter(dados, expansion == 'N') %>% top_n(own, n=50)
  ggplot(quant1, aes(y = own, x = reorder(title, own))) +
    geom_bar(stat = 'identity', width = .5, fill = 'red') +
    coord_flip()+
+     theme_bw()+
   theme(plot.title = element_text(hjust = 0.5, face = 'bold'),
         axis.title.x = element_text(face = 'bold'), axis.title.y = element_text(face = 'bold'),
         plot.caption = element_text(size = 6))+
      scale_y_continuous(expand = c(.01, .01)) +
-  labs(title="Número de coleções que possuem o jogo", x ="Jogo", y = "Quantidade de coleções",
+  labs(title="Número de pessoas que possuem o jogo", x ="Jogo", y = "Quantidade de coleções",
        caption = 'Dados extraídos de https://boardgamegeek.com')
  
 ```
@@ -119,7 +120,7 @@ quant1 <- filter(dados, expansion == 'N') %>% top_n(own, n=50)
 
 ## Ranking
 
-Tudo bem, temos um monte de jogos, mas não tenho tempo de jogar todos eles, infelizmente. Pra saber qual vale a pena sempre vemos o *ranking* dos jogos, mas a dúvida que fica, os jogos mais novos são melhores que os mais antigos? Bem, talvez.
+Tudo bem, temos um monte de jogos, mas não tenho tempo de jogar todos eles, infelizmente. Para saber qual vale a pena sempre vemos o *ranking* dos jogos, mas a dúvida que fica, os jogos mais novos são melhores que os mais antigos? Bem, talvez.
 
 ```{r ranking, fig.width=9, fig.height=7}
 
@@ -147,7 +148,7 @@ As notas do BGG são feitas a partir do que eles chamam de "Média Bayesiana", o
 
 ## Complexidade e mecânicas
 
-Essa é a sessão que eu decidi ser, a "visualização ambiciosa do dia". Fiz uma mistura de informação pra ver se temos algum *insight* interessante. Os jogos do BGG possuem [51 mecânicas possíveis](https://boardgamegeek.com/browse/boardgamemechanic), onde um jogo pode ser construído utilizando diversas mecânicas mas, um jogo com mais mecânicas influi diretamente num jogo mais pesado (complexo)?
+Essa é a sessão que eu decidi ser, a "visualização ambiciosa do dia". Fiz uma mistura de informação para ver se temos algum *insight* interessante. Os jogos do BGG possuem [51 mecânicas possíveis](https://boardgamegeek.com/browse/boardgamemechanic), onde um jogo pode ser construído utilizando diversas mecânicas mas, um jogo com mais mecânicas influi diretamente num jogo mais pesado (complexo)?
 
 
 ```{r complex, warnings = F, fig.width=9, fig.height=7}
@@ -193,7 +194,8 @@ meca2 <- mecanicas %>% filter(expansion == 'N') %>% count(mecanica)%>%
    ggplot(meca2, aes(x = reorder(mecanica, perc), y = perc)) +
      geom_bar(stat = 'identity', fill = 'red', width = .5) +
      coord_flip() +
-     scale_y_continuous(name = 'Porcentagem',labels=percent, breaks = seq(0, .12, 0.02),
+       theme_bw()+
+scale_y_continuous(name = 'Porcentagem',labels=percent, breaks = seq(0, .12, 0.02),
                       limits = c(0,0.125), expand = c(0,0)) +
      scale_x_discrete(name = 'Mecânica')+
   theme(axis.text.x = element_text(vjust = .5),plot.title = element_text(hjust = 0.5, face = 'bold'),
@@ -214,7 +216,8 @@ for(i in 1:4){
 p <- ggplot(tt, aes(x = reorder(mecanica, perc), y = perc)) +
      geom_bar(stat = 'identity', fill = 'red', width = .5) +
      coord_flip() +
-     scale_y_continuous(name = 'Porcentagem',labels=percent, breaks = seq(0, .16, 0.02),
+       theme_bw()+
+    scale_y_continuous(name = 'Porcentagem',labels=percent, breaks = seq(0, .16, 0.02),
                       limits = c(0,0.17), expand = c(0,0)) +
      scale_x_discrete(name = 'Mecânica')+
      theme(axis.text.y = element_text(size=8, vjust = .3), 

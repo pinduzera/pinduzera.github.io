@@ -8,5 +8,5 @@ description: "Como falar comigo"
 Para entrar em contato pode utilizar qualquer uma das redes no menu do site ou enviar um e-mail para <ehellas@gmail.com>.
 
 <center>
-<img src="/imgs/email.jpg" width="50%">.
+<img src="/imgs/email.jpg" width="100%">.
 </center>
