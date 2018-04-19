@@ -286,7 +286,8 @@ emotionKEY = &#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;
 mybody = list(url = img.url)
 
 ### lista de pacotes utilizados
-# c(&#39;dplyr&#39;, &#39;tidyr&#39;, &#39;tibble&#39;,&#39;httr&#39;, &#39;ggplot2&#39;, &#39;scales&#39;, &#39;gridExtra&#39;, &#39;grid&#39;, &#39;imager&#39;) </code></pre>
+# c(&#39;dplyr&#39;, &#39;tidyr&#39;, &#39;tibble&#39;,&#39;httr&#39;, &#39;ggplot2&#39;, 
+# &#39;scales&#39;, &#39;gridExtra&#39;, &#39;grid&#39;, &#39;imager&#39;) </code></pre>
 <p>Aqui é a parte onde de fato faz a requisição para a API, ela retorna por padrão apenas a posição dos rostos mas existe uma série de argumentos (a variável é <code>returnFaceAttributes</code>) que podem ser adicionados como detectar se está usando óculos, barbas, maquiagem e o mais importante para nós, qual a emoção da nossa sopinha de abóbora.</p>
 <pre class="r"><code>faceEMO = httr::POST(
   url = api.url,
@@ -305,7 +306,7 @@ mybody = list(url = img.url)
 
 faceEMO</code></pre>
 <pre><code>## Response [https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceAttributes=emotion]
-##   Date: 2018-04-19 20:51
+##   Date: 2018-04-19 21:02
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 1.05 kB</code></pre>
@@ -325,10 +326,11 @@ plot(image, xlim = c(0, 1300), main = &#39;Choque de Cultura: detecção de face
      axes=T, yaxs=&#39;i&#39;)
 
 # desenhando os retângulos, os atributos que temos no f1 são 
-# top (ponto mais alto), left(ponto a esquerda), width (largura), e height (altura)
+# top (ponto mais alto), left(ponto a esquerda), 
+# width (largura), e height (altura)
 # para desenhar as retas vamos usar cada um deles
-# f1[1,] = f1[&#39;top&#39;,], f1[2,] = f1[&#39;left&#39;,], 
-# f1[3,] = f1[&#39;width&#39;,], f1[4,] = f1[&#39;height&#39;,],
+# f1[1,] = f1[&#39;top&#39;,]; f1[2,] = f1[&#39;left&#39;,] 
+# f1[3,] = f1[&#39;width&#39;,]; f1[4,] = f1[&#39;height&#39;,]
 
 rect(xleft = f1[2,], ytop = f1[1,], xright = f1[2,] + f1[3,],
      ybottom = f1[1,] + f1[4,], border = &#39;blue&#39;, lwd = 2)
