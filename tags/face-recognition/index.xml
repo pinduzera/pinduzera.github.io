@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Face Recognition on Pinda&#39;s Data</title>
+    <link>/tags/face-recognition/</link>
+    <description>Recent content in Face Recognition on Pinda&#39;s Data</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 19 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/face-recognition/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Choque de Cultura - Hoje, API</title>
+      <link>/post/choque/choque-de-cultura-hoje-api/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/choque/choque-de-cultura-hoje-api/</guid>
+      <description>Achou que não ia mais ter post? Acho errado, programador (ou curioso)! Hoje, análise de emoções e API.
+Primeiramente, queria dizer que o post não vai ser tão longo como queria pois não consegui de jeito nenhum obter as legendas dos vídeos do Choque de Cultura, ou seja, vamos ficar sem análise textual, infelizmente. =(
+Segundo, se você não sabe, ainda, o que é Choque de Cultura, clique aí e deem uma olhada em um humor bem peculiar.</description>
+    </item>
+    
+  </channel>
+</rss>

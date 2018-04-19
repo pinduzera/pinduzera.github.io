@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 26 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Api</title>
+      <link>/tags/api/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/api/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Boardgame</title>
@@ -18,6 +27,15 @@
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/boardgame/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Choque De Cultura</title>
+      <link>/tags/choque-de-cultura/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/choque-de-cultura/</guid>
       <description></description>
     </item>
     
@@ -31,9 +49,36 @@
     </item>
     
     <item>
+      <title>Emotion Analysis</title>
+      <link>/tags/emotion-analysis/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/emotion-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Face Recognition</title>
+      <link>/tags/face-recognition/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/face-recognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microsoft Api</title>
+      <link>/tags/microsoft-api/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/microsoft-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>

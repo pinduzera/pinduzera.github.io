@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 26 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Choque de Cultura - Hoje, API</title>
+      <link>/post/choque/choque-de-cultura-hoje-api/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/choque/choque-de-cultura-hoje-api/</guid>
+      <description>Achou que não ia mais ter post? Acho errado, programador (ou curioso)! Hoje, análise de emoções e API.
+Primeiramente, queria dizer que o post não vai ser tão longo como queria pois não consegui de jeito nenhum obter as legendas dos vídeos do Choque de Cultura, ou seja, vamos ficar sem análise textual, infelizmente. =(
+Segundo, se você não sabe, ainda, o que é Choque de Cultura, clique aí e deem uma olhada em um humor bem peculiar.</description>
+    </item>
     
     <item>
       <title>Jogos de tabuleiro em números</title>
