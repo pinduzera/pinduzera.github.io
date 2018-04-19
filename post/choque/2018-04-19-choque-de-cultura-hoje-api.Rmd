@@ -25,6 +25,7 @@ library('scales')
 library("gridExtra")
 library('grid')
 library('imager') 
+library('httr')
 
 # setwd('E:/Dropbox/Dropbox/Program/pindata/pinduzera.github.io/post/choque')
 emotionKEY = '0a7c1a4b80fc4a0dbf0a0b3512ab0c21'
@@ -78,14 +79,13 @@ emotionKEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 mybody = list(url = img.url)
 
 ### lista de pacotes utilizados
-# c('dplyr', 'tidyr', 'tibble', 'ggplot2', 'scales', 'gridExtra', 'grid', 'imager') 
+# c('dplyr', 'tidyr', 'tibble','httr', 'ggplot2', 'scales', 'gridExtra', 'grid', 'imager') 
 
 ```
 
 Aqui é a parte onde de fato faz a requisição para a API, ela retorna por padrão apenas a posição dos rostos mas existe uma série de argumentos (a variável é `returnFaceAttributes`) que podem ser adicionados como detectar se está usando óculos, barbas, maquiagem e o mais importante para nós, qual a emoção da nossa sopinha de abóbora.
 
 ```{r part1, echo=TRUE}
-library('httr')
 
 faceEMO = httr::POST(
   url = api.url,

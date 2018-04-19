@@ -286,11 +286,9 @@ emotionKEY = &#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;
 mybody = list(url = img.url)
 
 ### lista de pacotes utilizados
-# c(&#39;dplyr&#39;, &#39;tidyr&#39;, &#39;tibble&#39;, &#39;ggplot2&#39;, &#39;scales&#39;, &#39;gridExtra&#39;, &#39;grid&#39;, &#39;imager&#39;) </code></pre>
+# c(&#39;dplyr&#39;, &#39;tidyr&#39;, &#39;tibble&#39;,&#39;httr&#39;, &#39;ggplot2&#39;, &#39;scales&#39;, &#39;gridExtra&#39;, &#39;grid&#39;, &#39;imager&#39;) </code></pre>
 <p>Aqui é a parte onde de fato faz a requisição para a API, ela retorna por padrão apenas a posição dos rostos mas existe uma série de argumentos (a variável é <code>returnFaceAttributes</code>) que podem ser adicionados como detectar se está usando óculos, barbas, maquiagem e o mais importante para nós, qual a emoção da nossa sopinha de abóbora.</p>
-<pre class="r"><code>library(&#39;httr&#39;)
-
-faceEMO = httr::POST(
+<pre class="r"><code>faceEMO = httr::POST(
   url = api.url,
   content_type(&#39;application/json&#39;), 
   add_headers(.headers = c(&#39;Ocp-Apim-Subscription-Key&#39; = emotionKEY)),
@@ -307,7 +305,7 @@ faceEMO = httr::POST(
 
 faceEMO</code></pre>
 <pre><code>## Response [https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceAttributes=emotion]
-##   Date: 2018-04-19 18:35
+##   Date: 2018-04-19 20:51
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
 ##   Size: 1.05 kB</code></pre>
