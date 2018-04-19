@@ -11,6 +11,7 @@ tags:
   - choque de cultura
   - face recognition
   - emotion analysis
+image: "/imgs/choque/choque.jpg"
 ---
 
 ```{r setup, include=FALSE}
