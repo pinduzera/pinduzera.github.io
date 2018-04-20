@@ -11,7 +11,6 @@ tags:
   - choque de cultura
   - face recognition
   - emotion analysis
-image: "/imgs/choque/choque2.png"
 ---
 
 ```{r setup, include=FALSE}
@@ -43,7 +42,7 @@ emotionKEY = '0a7c1a4b80fc4a0dbf0a0b3512ab0c21'
 mybody = list(url = img.url)
 ```
 
-Achou que não ia mais ter post? Acho errado, programador (ou curioso)! Hoje, análise de emoções e API.
+Achou que não ia mais ter post? Achou errado, programador (ou curioso)! Hoje, análise de emoções e API.
 
 <center>
 <img src="/imgs/choque/choque.jpg" width="80%">
