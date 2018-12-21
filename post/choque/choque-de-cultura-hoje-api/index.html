@@ -261,25 +261,25 @@
 <center>
 <img src="/imgs/choque/choque.jpg" width="80%">
 </center>
-<p>Primeiramente, queria dizer que o post não vai ser tão longo como queria pois não consegui de jeito nenhum obter as legendas dos vídeos do <a href="https://www.youtube.com/watch?v=4u1w1UnqI0Y">Choque de Cultura</a>, ou seja, vamos ficar sem análise textual, infelizmente. =(</p>
+<p>Primeiramente, queria dizer que o post náo vai ser tão longo como queria pois não consegui de jeito nenhum obter as legendas dos v?deos do <a href="https://www.youtube.com/watch?v=4u1w1UnqI0Y">Choque de Cultura</a>, ou seja, vamos ficar sem análise textual, infelizmente. =(</p>
 <p>Segundo, se você não sabe, ainda, o que é <a href="https://www.youtube.com/watch?v=4u1w1UnqI0Y">Choque de Cultura</a>, vale a pena dar uma olhada em um humor bem peculiar.</p>
 <div id="api-e-r" class="section level2">
 <h2>API e R</h2>
-<p>Bem, como disse, hoje é um post sobre API utilizando o R, mais especificamente a <a href="https://azure.microsoft.com/pt-br/services/cognitive-services/face/">API do Microsoft Azure de detecção facial</a>. Quando vocês olham pra imagem acima, o que os rostos deles transmitem? Ódio? Calma? Felicidade? Vamos descobrir pois além de detectar rostos a API serve para identificar emoções dentre outras funcionalidades que vou listar mais para frente.</p>
+<p>Bem, como disse, hoje é um post sobre API utilizando o R, mais especificamente a <a href="https://azure.microsoft.com/pt-br/services/cognitive-services/face/">API do Microsoft Azure de detec??o facial</a>. Quando vocês olham pra imagem acima, o que os rostos deles transmitem? Ódio? Calma? Felicidade? Vamos descobrir pois além de detectar rostos a API serve para identificar emoções dentre outras funcionalidades que vou listar mais para frente.</p>
 <p>Se você pretende copiar este post você vai precisar (do maravilhoso R, é claro) e criar uma conta no <a href="https://azure.microsoft.com/pt-br/free/">Micrsoft Azure</a>, ativar a API e pegar a chave para poder reproduzir o que vou mostrar. Se estiverem com dificuldade só falar nos comentários que passo mais detalhes de como fazer.</p>
 </div>
 <div id="programando" class="section level2">
 <h2>Programando</h2>
-<p>Para começar, alguns parâmetros básicos, não esqueçam de pegar a chave no site.</p>
+<p>Para come?ar, alguns parâmetros básicos, não esqueçam de pegar a chave no site.</p>
 <pre class="r"><code># Definir imagem cultural
-# tem que ser um link, não pode ser imagem local
+# tem que ser um link, n?o pode ser imagem local
 img.url = &#39;https://cdn-images-1.medium.com/max/1280/1*iNieUrcsuUTTvmr2BJR_bg.jpeg&#39;
 
 # Definir link da API do Microsoft Azure
-api.url = &#39;https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect&#39;
+api.url = &#39;https://brazilsouth.api.cognitive.microsoft.com/face/v1.0/detect&#39;
 
 # Definir chave de acesso 
-# (disponível em: https://www.microsoft.com/cognitive-services/en-us/emotion-api)
+# (dispon?vel em: https://www.microsoft.com/cognitive-services/en-us/emotion-api)
 emotionKEY = &#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;
 
 # Definir imagem para a API
@@ -305,19 +305,19 @@ mybody = list(url = img.url)
 #    emotion,hair,makeup,occlusion,accessories,blur,exposure,noise&#39;)
 
 faceEMO</code></pre>
-<pre><code>## Response [https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceAttributes=emotion]
-##   Date: 2018-04-20 01:55
+<pre><code>## Response [https://brazilsouth.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceAttributes=emotion]
+##   Date: 2018-12-21 16:50
 ##   Status: 200
 ##   Content-Type: application/json; charset=utf-8
-##   Size: 1.05 kB</code></pre>
-<pre class="r"><code># Se Status = 200, deu tudo acerto até então</code></pre>
+##   Size: 1.04 kB</code></pre>
+<pre class="r"><code># Se Status = 200, deu tudo acerto at? ent?o</code></pre>
 <p>Agora vamos usar os dados que obtivemos:</p>
 <pre class="r"><code># Obtendo os resultados
 faces &lt;- httr::content(faceEMO)#[[1]]
-#Aqui temos a posição de cada rosto na imagem
-f1 &lt;- faces[[1]]$faceRectangle %&gt;% as_tibble() %&gt;% t() ## Rogerinho do ingá
+#Aqui temos a posi??o de cada rosto na imagem
+f1 &lt;- faces[[1]]$faceRectangle %&gt;% as_tibble() %&gt;% t() ## Rogerinho do ing?
 f2 &lt;- faces[[2]]$faceRectangle %&gt;% as_tibble() %&gt;% t() ## Julinho da Van
-f3 &lt;- faces[[3]]$faceRectangle %&gt;% as_tibble() %&gt;% t() ## Maurílio
+f3 &lt;- faces[[3]]$faceRectangle %&gt;% as_tibble() %&gt;% t() ## Maur?lio
 f4 &lt;- faces[[4]]$faceRectangle %&gt;% as_tibble() %&gt;% t() ## Renan
 
 #carregar a do PC imagem pro R
@@ -325,7 +325,7 @@ image &lt;- imager::load.image(&#39;C:/Users/ehell/Desktop/choque/choque.jpg&#39
 plot(image, xlim = c(0, 1300), main = &#39;Choque de Cultura: detecção de faces&#39;,
      axes=T, yaxs=&#39;i&#39;)
 
-# desenhando os retângulos, os atributos que temos no f1 são 
+# desenhando os ret?ngulos, os atributos que temos no f1 s?o 
 # top (ponto mais alto), left(ponto a esquerda), 
 # width (largura), e height (altura)
 # para desenhar as retas vamos usar cada um deles
@@ -342,8 +342,8 @@ rect(xleft = f4[2,], ytop = f4[1,], xright = f4[2,] + f4[3,],
      ybottom = f4[1,] + f4[4,], border = &#39;blue&#39;, lwd = 2)</code></pre>
 <p><img src="/post/choque/2018-04-19-choque-de-cultura-hoje-api_files/figure-html/part2-1.png" width="672" /></p>
 <p>Até agora está dando tudo certo, a API conseguiu identificar os rostos dos campeões, agora vamos ver que tipo de emoção estão passando. Convenhamos, tirando o Maurílio eu não sei de nada, talvez um Rogerinho “full putasso”.</p>
-<pre class="r"><code># Os dados das emoções vem em lista e um pouco bagunçados,
-# então vamos arrumar e traduzir
+<pre class="r"><code># Os dados das emoções vem em lista e um pouco bagun?ados,
+# ent?o vamos arrumar e traduzir
 
 emot &lt;-  c(&#39;Raiva&#39;,&#39;Desprezo&#39;,&#39;Desgosto&#39;,&#39;Medo&#39;,
            &#39;Felicidade&#39;,&#39;Neutro&#39;,&#39;Tristeza&#39;,&#39;Surpresa&#39;)
@@ -364,7 +364,7 @@ renan &lt;- faces[[4]]$faceAttributes$emotion %&gt;% as_tibble() %&gt;% t() %&gt
   as.data.frame() %&gt;% rownames_to_column(&quot;emotion&quot;) %&gt;%
   mutate(emotion = emot)
 
-### Preparando os gráficos
+### Preparando os gr?ficos
 
 p1 &lt;- rogerinho %&gt;% ggplot(aes(x = emotion, y = V1, fill = emotion)) +
               geom_bar(stat = &#39;identity&#39;)+
@@ -386,7 +386,7 @@ p2 &lt;- julinho %&gt;% ggplot(aes(x = emotion, y = V1, fill = emotion)) +
         axis.title.y = element_text(face = &#39;bold&#39;),
         plot.caption = element_text(size = 6))+
   labs(title = &#39;Julinho da Van&#39;, x = &#39;Emoção&#39;, y = &#39;Porcentagem&#39;)+
-  guides(fill=guide_legend(title=&quot;Emoções&quot;))+ guides(fill=F)
+  guides(fill=guide_legend(title=&quot;Emoçoes&quot;))+ guides(fill=F)
 
 p3 &lt;- maurilio %&gt;% ggplot(aes(x = emotion, y = V1, fill = emotion)) +
   geom_bar(stat = &#39;identity&#39;)+
@@ -414,7 +414,7 @@ gridExtra::grid.arrange(p1, p2, p3, p4, ncol=2,
              top=textGrob(&quot;Análise de emoções: Choque de Cultura&quot;, 
                           gp = gpar(fontsize=18, fontface = &#39;bold&#39;)))</code></pre>
 <p><img src="/post/choque/2018-04-19-choque-de-cultura-hoje-api_files/figure-html/part3-1.png" width="672" /></p>
-<p>Pronto, dados o nosso gráfico temos nossas respostas. O p̶a̶l̶e̶s̶t̶r̶i̶n̶h̶a Maurílio é um cara muito feliz e sem sombra de dúvidas. O Julinho da Van já sabemos que é um cara estranho, apesar de ser neutro tem lá aquele seu fundo de desprezo. O Renan tenta esconder mas talvez sintia falta do seu pequeno no set na hora da foto?
+<p>Pronto, dados o nosso gráfico temos nossas respostas. O p̶a̶l̶e̶s̶t̶r̶i̶n̶h̶a̶ Maurílio é um cara muito feliz e sem sombra de dúvidas. O Julinho da Van já sabemos que é um cara estranho, apesar de ser neutro tem lá aquele seu fundo de desprezo. O Renan tenta esconder mas talvez sintia falta do seu pequeno no set na hora da foto?
 Por último temos o Rogerinho do Ingá, um cara complexo e de muita emoções, apesar de parecer um cara amigável tem aquele ódio por todos que não entendem de cultura como essa grande equipe.</p>
 <p>Ideias e sugestões para novos posts? Só mandar aí nos comentários, até a próxima galera.</p>
 </div>
@@ -439,14 +439,8 @@ Por último temos o Rogerinho do Ingá, um cara complexo e de muita emoções, a
   </div>
   <div class="pure-u-10-24">
     
-    <nav class="next">
-      <a href="/post/post-de-teste/">um titulo gad</a>
-    </nav>
-    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
-    
-    <a href="/post/post-de-teste/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
